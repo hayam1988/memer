@@ -18,7 +18,7 @@ class App extends React.Component {
     e.preventDefault() // no refreshing when searching
     this.setState({ loading: true })
     var key = 'wP9iA7nFzpyz2JQtDNwrbBDfkAqpwTPP'
-    var url = `http://api.giphy.com/v1/gifs/search?q=${this.state.text}&api_key=${key}`
+    var url = `https://api.giphy.com/v1/gifs/search?q=${this.state.text}&api_key=${key}`
     var r = await fetch(url)
     var json = await r.json()
     this.setState({ memes: json.data, loading: false, text: '' })
